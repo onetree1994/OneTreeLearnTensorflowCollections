@@ -40,7 +40,7 @@ for i in range(25):
     plt.xticks([])
     plt.yticks([])
     plt.grid(False)
-    plt.imshow(train_images[i], cmap=plt.cm.binary)
+    plt.imshow(train_images[i])
     plt.xlabel(class_names[train_labels[i]])
 
 # construct the model
@@ -95,7 +95,7 @@ def plot_image(i, predictions_array, true_label, img):
   plt.xticks([])
   plt.yticks([])
 
-  plt.imshow(img, cmap=plt.cm.binary)
+  plt.imshow(img)
 
   predicted_label = np.argmax(predictions_array)
   if predicted_label == true_label:
