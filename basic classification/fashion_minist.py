@@ -6,9 +6,6 @@ from tensorflow import keras
 import numpy as np
 import matplotlib.pyplot as plt
 
-# add git test
-print("git test...")
-
 # check tensorflow version`
 print(tf.__version__)
 

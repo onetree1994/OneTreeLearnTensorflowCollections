@@ -1,0 +1,5 @@
+{
+    "python.pythonPath": "/home/guoqing/anaconda3/envs/tensorflow-gpu/bin/python",
+    "files.autoSave": "onFocusChange",
+    "python.formatting.provider": "yapf"
+}
