@@ -97,7 +97,7 @@ history = model.fit(
 
 hist = pd.DataFrame(history.history)
 hist['epoch'] = history.epoch
-print(hist.tail())
+print("\n", hist.tail())
 
 
 # 画图
@@ -124,13 +124,13 @@ def plot_history(history):
 
 plot_history(history)
 
-
 # 尝试防止过拟合的措施
 model = build_model()
 # The patience parameter is the amount of epochs to check for improvement
 early_stop = keras.callbacks.EarlyStopping(monitor='val_loss', patience=50)
 history = model.fit(normed_train_data, train_labels, epochs=EPOCHS,
                     validation_split = 0.2, verbose=0, callbacks=[early_stop, PrintDot()])
+print("\n", pd.DataFrame(history.history).tail())
 plot_history(history)
 
 # 在测试集上的效果
@@ -152,5 +152,4 @@ error = test_predictions - test_labels
 plt.hist(error, bins = 25)
 plt.xlabel("Prediction Error [MPG]")
 _ = plt.ylabel("Count")
-plt.show()
 print()
